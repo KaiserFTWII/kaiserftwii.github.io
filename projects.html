@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kaiser's Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="projects">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">The Portfolio of Kaiser Islam</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="aboutme.html">About Me</a></li>
+								<li><a href="projects.html">Projects</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Projects</h2>
+								<p>Below are some of my completed projects, along with what I'm currently working on</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<section>
+										<h2>Current Project</h2>
+										<h3>1 Bedroom Apartment</h3>
+										<p>
+											My current project is an apartment room in blender, which will be my first original project (with some help in setting up basic rooms). I'm currently in the process of learning about and creating an efficient floor plan, to ensure that the apartment is as realistic and functional as possible. Check back for any updates and images!
+										</p>
+									</section>
+									<section>
+										<h2>Past Projects</h2>
+										<h3>Zanotta William Couch</h3>
+										<p><span class="image left"><img src="images/Final Couch V2.png" alt="" /></span>
+											The latest project that I finished was recreating this couch from Zanotta. Similar to the Fredericia chair below, I watched a tutorial and followed along. The couch can originally found at the <a href="https://www.zanotta.it/en-us/products/sofas/william" target="_blank">Zanotta Website</a>, where you can also find the blueprints from which to model from. This was also the first project where I explored the physics tab, specifically cloth simulations. Using these simluations, I was able to generally figure out how various aspects of the tab worked, such as pressure and gravity.
+											I also messed around with the collisions tab and figured out how to reduce the gap between two objects colliding and reducing the friction between two objects. This was also the first time working with multiple UV maps on the same object; the side pillows and back seating both had seams on the sides, which was introduced via another texture map in addition to the main fabric texture like the rest of the couch. The pillow and blanket textures can be found at <a href="https://www.poliigon.com/" target="_blank">poliigon.com</a>
+										</p>
+										<h3 style="text-align: right">Fredericia Søborg Chair</h3>
+										<p><span class="image right"><img src="images/Final Chair Model.png" alt="" /></span>
+											The Søborg chair is the first project where I modelled something with existing blueprints, which can be found at the <a href="https://www.fredericia.com/products/by-designer-b%C3%B8rge-mogensen/s%C3%B8borg-wood-base-1.aspx?PID=63&catid=6219" target="_blank">Frederecia website</a>. This model came from a tutorial which outlined the basics of modelling an existing object, which explained how to create a cooperative mesh, setting seams for UV unwrapping so that they aren't obvious and edge flow. One of the trickiest parts of this whole project was creating the backrest and
+											modelling curved surfaces in general. The backrest was quite difficult due to its rotation, which quickly became an issue when looking at the blueprints provided. If the backrest was modelled via the front and top, it wouldn't look right from the side. To resolve this issue, I modelled it straight on (no rotation) and then rotated it to match the anlge on the side. Though I couldn't replicate it exactly, the difference aren't major and the curve still remains smooth enough to act as a backrest. I also learned a bit about how to set up studio lighting. This includes
+											creating an infinite background (creating a plane, extruding it and creating bevels), creating a dual lighting system to highlight certain parts of the chair and introducing ambient occlusion to make shadows more realistic. Unfortunately, I no longer have access to the .blend due to corrupted files.
+										</p>
+										<h3>Donut Animation</h3>
+										<p><span class="image left"><video width=400 height=400 controls autoplay muted loop src="images/Final Donut Animation.mkv" type="video/mkv">></span>
+											The very first project which I undertook was, as expected, a tutorial outlining most of the basics of blender. As can be seen, I followed the donut tutorial from <a href="https://www.youtube.com/user/AndrewPPrice" target="_blank">Blender Guru</a> on Youtube. The tutorial went over everything from modelling to sculpting to keyframe animation. I learned how to create models in blender, both from scratch (the donut and the plate) and from a reference image (the cup). The tutorial also went over sculpting and texture painting, which helped give the donut it's realistic features,
+											such as the icing and the indented middle band going around the donut with a ligther shade. I also learned about nodes in the shading tab and used it to make the donut more lifelike, by using mixRGB nodes to play around with the colour and multiple displacement nodes to add bumps. Additionally, I imported a couple of textures from <a href="https://www.poliigon.com/" target="_blank">poliigon.com</a> for the background and marble table to emulate the look and feel of a cafe. Fianlly, I added some lighting and created an empty axis on the donut to focus the camera on. This allowed
+											me to start with the donut and plate out of frame and rotate it into view and change the focus of the camera. To create the animation, I used keyframes, rendered and image sequence and put it together in blender's video editing tab. Let the journey begin!
+										</p>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Below are ways that you can contact me</p>
+							<ul class="contact">
+								<li class="icon solid fa-envelope">kaiser.islam@mail.utoronto.ca</a></li>
+								<li class="icon brands fa-twitter"><a href="https://www.linkedin.com/in/kaiser-islam" target="_blank">Linkedin</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Kaiser Islam. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

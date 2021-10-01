@@ -125,7 +125,7 @@ input, select, textarea {
 	
 	body.civ235 {
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/Living\ Davani\ Coffee\ Table\ 3.png");
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/Graphics\ Background\ Image.jpg");
 		background-size: cover;
 		background-attachment: fixed, fixed;
 		background-position: center, center;
@@ -150,6 +150,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+		
 /* Type */
 
 	body, input, select, textarea {

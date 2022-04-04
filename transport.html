@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+
+		<title>Transportation Engineering</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="transport">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">The Portfolio of Kaiser Islam</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="aboutme.html">About Me</a></li>
+								<li><a href="projectsoverview.html">Project Overview</a></li>
+								<li><a href="resume.html">Resume</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Transportation Engineering</h2>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<section>
+										<h2>Summary</h2>
+										<p>
+                                            This section outlines the skills I developed in Aimsun Next 22 to create and analyze a micro model consisting of several intersections. Throughout this process, I learned how to create signal groups, set up OD matrices, implement control plans and create traffic incidents among other topics.
+										</p>
+										<h2>Reflections and the Importance of Transportation Modelling in the Civil Engineering Industry</h2>
+										<p>
+											I learned about Aimsun through CIV332 in third year at UofT, and it was an important introduction to the practical applications of transportation engineering. Through this project, I am now familiar with how concepts learned in my transportation courses can be applied to real life simulation. This project also furthered my interest in discovering how software
+                                            can be used to optimize daily activities, such as transportation. As technology continues to evolve, it is important that softwares like Aimsun Next 22 are developed so that they can help improve quality of life.
+										</p>
+									</section>
+									<section>
+										<h3 style="text-align: left">Setting up the Model</h3>
+										<p><a href="images/OD Matrix.jpg" target="_blank"><span class="image left"><img src="images/OD Matrix.jpg" alt=""/></a></span>
+											To begin with, we were provided with a half finished model and had to extend various roads and connect them at different intersections to complete it. Once this was completed, it was time to set all of the parameters for the simulations. As can be seen on the left, we had to set up an origin-destination (OD) matrix to define all of the flows in the system. Once this was completed, we had to create a basic <a href="images/Control Plan.jpg" target="_blank">control plan</a> and set that as the <a href="images/Master Control Plan.jpg" target="_blank">master control plan</a> for the entire system. After this was done,
+											preliminary signal groups and signal timings were added.<a href="images/Signal Groups.jpg" target="_blank">Signal groups</a> were added based on how the intersections are set up in real life. <a href="images/Signal Timings.jpg" target="_blank">Signal timings</a> were added to initially set up the control plan from earlier; these timings will change once we design the traffic lights (See "Traffic Signal Control" below). The very final step of setting up the model was to create the <a href="images/Centroid Connections.jpg" target="_blank">centroid connections</a> to ensure that trip generations/attractions were functioning
+											properly and made sense. Through setting up the model, I learned how to create intersections, set up OD matrices and create signal groups and timings.
+										</p>
+										<h3 style="text-align: right;">Traffic incidents and shockwave analysis</h3>
+										<p><a href="images/Traffic Incident.jpg" target="_blank"><span class="image right"><img src="images/Traffic Incident.jpg" alt=""/></a></span>
+											Now that the model is prepared and the intersections have the proper parameters, we can now begin performing different analyses on the system. The first situation to analyze is the presence of a traffic incident causing a shockwave. To set up the incident, a section was created in the middle of one of the highways and a traffic incident was set up, as can be seen on the right. This traffic incident spanned pretty much the length of the section and was defined with a 200.0 m visibility distance. Once the incident was created, a new <a href="images/Centroid Connections.jpg" target="_blank">dynamic scenario</a> was added,
+											containing the traffic condition as one of the strategies and conditions. After the scenario was created, it was time to see how the accident effected traffic flow; the simulation was ran and we were able to see how <a href="images/Congestion in Upstream Section.png" target="_blank">congestion backed up</a> upstream of the secion. Using the amount of time required for congestion to reach upstream and the length of the highway segment, we can find the speed of the shockwave propogating backwards. This is only an approximate method however, since it relies on the user visually determining congestion; we must use a mathematical
+											equation to find a more precise answer. To do so, we can find the graphs of the <a href="images/Flow (Traffic Incident).png" target="_blank">flow</a> and <a href="images/Density (Traffic Incident).png" target="_blank">density</a> before and after the incident. We can find where the flow and density stabilize and use those as the parameters for the accident portion of the shockwave analysis, while the average of the first ten minutes of normal flow and density can be used as the other part of the shockwave analysis. Using these parameters give us a different result than when conducted visually, but a much more accurate one
+											since we're not relying on human judgement.
+										</p>
+										<h3 style="text-align: left">Traffic Signal Control</h3>
+										<p><a href="images/Traffic Signals.jpg" target="_blank"><span class="image left"><img src="images/Traffic Signals.jpg" alt=""/></a></span>
+											The last main part of this micro model is to create a traffic signal control. As can be seen on the left, one of the intersections from the main model was selected and the following phases were set. Once these phases were set, the 15 minute flow rate was found by running a simulation in Aimsun (separate from the one from the accident) and making the dynamic scenario output statistics in 15 minute intervals. Once this was done, a pretimed traffic signal was designed using the Webster method. To complete this method, we were given preliminary information, including (but not limited to) peak hour factor (PHF), left-turn factor and
+											saturation flow rate. After completing the Webster method, a signal plan was set up, replacing the preliminary one created earlier. Through this part of the project, I learned how crucial it is to create optimal signal timings to ensure that there is as little delay as possible and to minimize the potential dilemma zone.
+										</p>
+									</section>
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Below are ways that you can contact me</p>
+							<ul class="contact">
+								<li class="icon solid fa-envelope">kaiser.islam@mail.utoronto.ca</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/kaiser-islam" target="_blank">Linkedin</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Kaiser Islam. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
